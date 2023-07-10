@@ -1,3 +1,7 @@
+:root {
+    --main-bg-color: #724ae8; 
+    --text-color: #fff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,26 +12,34 @@
 body {
     background: #E3F2FD;
 }
-
+.chatbot-toggler {
+    position: fixed;
+    right: 40px;
+    bottom: 35px;
+    height: 50px;
+    width: 50px;
+    color: var(--text-color);
+    background: var(--main-bg-color);
+}
 .chatbot {
     position: fixed;
     right: 40px;
     bottom: 100px;
     width: 420px;
     overflow: hidden;
-    background: #fff;
+    background: var(--text-color);
     border: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
 }
 
 .chatbot header {
-    background: #724ae8;
+    background: var(--main-bg-color);
     padding:  16px 0;
     border-radius: 10px 10px 0 0;
     text-align: center;
 }
 
 .chatbot header h2 {
-    color: #fff;
+    color: var(--text-color);
     font-size: 1.4rem;
 }
 
@@ -44,7 +56,7 @@ body {
 .chatbox .incoming span {
     height: 32px;
     width: 32px;
-    background: #724ae8;
+    background: var(--main-bg-color);
     text-align: center;
     line-height: 32px;
     border-radius: 4px;
@@ -56,10 +68,10 @@ body {
     justify-content: flex-end;
 }
 .chatbox .chat p {
-    counter-reset: #fff;
+    counter-reset: var(--text-);
     font-size: 0.95rem;
     max-width: 75%;
-    background: #724ae8;
+    background: var(--main-bg-color);
     padding: 12px 16px;
     border-radius: 10px 10px 0 10px;
 }
@@ -76,7 +88,7 @@ body {
     gap: 5px;
     bottom: 0;
     width: 100%;
-    background: #fff;
+    background: var(--text-color);
     padding: 5x 20px;
     border-top: 1px solid #ccc;
 }
@@ -91,7 +103,7 @@ body {
 }
 
 .chat-input span {
-    color: #724ae8;
+    color: var(--main-bg-color);
     font-size: 1.35rem;
     cursor: pointer;
     background: red;
@@ -101,3 +113,6 @@ body {
     visibility: hidden;
 }
 
+.chat-input textarea:valid ~ span {
+    visibility: visible;
+}
