@@ -41,7 +41,20 @@ body {
 .chatbox .chat {
     display: flex;
 }
-
+.chatbox .incoming span {
+    height: 32px;
+    width: 32px;
+    background: #724ae8;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 4px;
+    margin: 0 10px 7px 0;
+    align-self: flex-start;
+}
+.chatbox .outgoing {   
+    margin: 20px 0;
+    justify-content: flex-end;
+}
 .chatbox .chat p {
     counter-reset: #fff;
     font-size: 0.95rem;
@@ -56,3 +69,35 @@ body {
     background: #f2f2f2;
     border-radius: 10px 10px 10px 0;
 }
+
+.chatbot .chat-input {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 5x 20px;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input textarea {
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 16px 15px 16px 0;
+    width: 100%;
+}
+
+.chat-input span {
+    color: #724ae8;
+    font-size: 1.35rem;
+    cursor: pointer;
+    background: red;
+    align-self: flex-end;
+    height: 55px;
+    line-height: 55px;
+    visibility: hidden;
+}
+
